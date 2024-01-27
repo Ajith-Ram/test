@@ -1,0 +1,2134 @@
+EXPERIMENT NO: 1
+
+Create an Employee Table with the help of Data Mining Tool WEKA.
+
+Description:
+
+We need to create an Employee Table with training data set which includes attributes like name. id, salary.
+experience, gender, phone number.
+
+Procedure:
+
+Steps:
+
+1) Open Start > Programs > Accessories > Notepad
+2) Type the following training data set with the help of Notepad for Employee Table.
+
+@relation employee
+
+@attribute name {x.y.z.a.b}
+@attribute id numeric
+
+@attribute salary {low.medium.high}
+@attribute exp numeric
+
+@attribute gender {male.female}
+@attribute phone numeric
+
+@data
+x.101.Jow.2.male.250311
+y.102.high,3 female,251665
+z.103.medium.1.male.240238
+a,104.low.5.female.200200
+b.105.high.2.male.240240
+
+3) After that the file is saved with .arff file format.
+
+4) Minimize the arff file and then open Start > Programs > weka-3-4.
+
+5) Click on weka-3-4, then Weka dialog box is displayed on the screen.
+
+6) In that dialog box there are four modes, click on explorer.
+
+7) Explorer shows many options. In that click on ‘open file’ and select the arff file
+
+8) Click on edit button which shows employee table on weka.
+
+MCSL-223 IGNOU pg. 1
+
+@ Viewer
+
+Relation: employee
+No. I:name 2:id 3:salary 4:exp 5:gender 6: phone
+Nominal Numeric Nominal Numeric Nominal Numeric
+1 x 101.0 low 2.0 male 250311.0
+2 s¥y 102.0 high 3.0 female 251665.0
+3 Zz 103.0 medium 1.0 male 240238.0
+4 a 104.0 low 5.0 female 200200.0
+5 b 105.0 high 2.0 male 240240.0
+
+Result:
+
+This program has been successfully executed.
+
+MCSL-223 IGNOU pg. 2
+
+EXPERIMENT NO: 2
+
+Create a Weather Table with the help of Data Mining Tool WEKA.
+
+Description:
+
+We need to create a Weather table with training data set which includes attributes like outlook, temperature.
+humidity. windy, play.
+
+Procedure:
+
+Steps:
+
+1) Open Start > Programs > Accessories > Notepad
+2) Type the following training data set with the help of Notepad for Weather Table.
+
+@relation weather
+
+@attribute outlook {sunny.rainy.overcast}
+@attribute temparature numeric
+@attribute humidity numeric
+
+@attribute windy {true.false}
+
+@attribute play {yes.no}
+
+@data
+sunny.85.0,85.0,false.no
+overcast, 80.0,90.0,true.no
+sunny,83.0,86.0,false.yes
+rainy.70.0,86.0,false.yes
+rainy.68.0.80.0.false.yes
+rainy.65.0,70.0.true.no
+overcast.64.0,65.0.false.yes
+sunny.72.0,95.0.true.no
+sunny.69.0,70.0.false.yes
+rainy.75.0,80.0.false.yes
+
+3) After that the file is saved with .arff file format.
+
+4) Minimize the arff file and then open Start > Programs > weka-3-4.
+
+5) Click on weka-3-4, then Weka dialog box is displayed on the screen.
+
+6) In that dialog box there are four modes, click on explorer.
+
+7) Explorer shows many options. In that click on ‘open file’ and select the arff file
+8) Click on edit button which shows weather table on weka.
+
+MCSL-223 IGNOU pg. 3
+
+Training Data Set > Weather Table
+
+Result:
+
+This program has been successfully executed.
+
+MCSL-223 IGNOU pg. 4
+
+EXPERIMENT NO: 3
+
+Apply Pre-Processing techniques to the training data set of Weather Table
+
+Description:
+
+Real world databases are highly influenced to noise, missing and inconsistency due to their queue size so the
+data can be pre-processed to improve the quality of data and missing results and it also improves the efficiency.
+
+There are 3 pre-processing techniques they are:
+
+1) Add
+2) Remove
+3) Normalization
+
+Creation of Weather Table:
+
+Procedure:
+
+1) Open Start > Programs > Accessories > Notepad
+2) Type the following training data set with the help of Notepad for Weather Table.
+
+@relation weather
+
+@attribute outlook {sunny.rainy.overcast}
+@attribute temparature numeric
+@attribute humidity numeric
+
+@attribute windy {true,false}
+
+@attribute play {yes.no}
+
+@data
+
+sunny.$5.0.85.0.false.no
+
+overcast,80.0,90.0,true.no
+
+sumny,83.0,86.0.false.yes
+
+rainy.70.0,86.0.false,yes
+
+rainy.68.0,80.0.false.yes
+
+rainy,.65.0,70.0.true.no
+
+overcast,64.0.65.0,false.yes
+
+sunny,72.0,95.0.true.no
+
+sunny,69.0,70.0,false.yes
+
+rainy.75.0,80.0.false.yes
+3) After that the file is saved with .arff file format.
+4) Minimize the arff file and then open Start > Programs > weka-3-4.
+5) Click on weka-3-4, then Weka dialog box is displayed on the screen.
+6) In that dialog box there are four modes. click on explorer.
+7) Explorer shows many options. In that click on ‘open file’ and select the arff file
+8) Click on edit button which shows weather table on weka.
+
+MCSL-223 IGNOU pg. 5
+
+Viewer
+Relation: weather
+| temparature | humidity | windy | play
+Nominal Numeric Numeric | Nominal
+
+1 [sunny 85.0 85.0false ino
+2 overcast 80.0 90.0\true ino
+3s sunny 83.0 86.0\false ves
+4 rainy 70.0 86.0 false yes
+iS |rainy 68.0 80.0/false —iyes
+16 rainy 65.0) 70,0}true ino
+7 jovercast 64.0 65.0 False yes
+{8 sunny 72.0 95.0/true ino
+9s |sunny 69.0 70.0 false yes
+10 |rainy 75.0 80.0\false yes
+
+Add > Pre-Processing Technique:
+
+Procedure:
+
+1) Start > Programs > Weka-3-4 > Weka-3-4
+
+2) Click on explorer.
+
+3) Click on open file.
+
+4) Select Weather.arff file and click on open.
+
+5) Click on Choose button and select the Filters option.
+
+6) In Filters. we have Supervised and Unsupervised data.
+
+7) Click on Unsupervised data.
+
+8) Select the attribute Add.
+
+9) Anew window is opened.
+
+10) In that we enter attribute index, type, data format, nominal label values for Climate.
+11) Click on OK.
+
+12) Press the Apply button, then a new attribute is added to the Weather Table.
+13) Save the file.
+
+14) Click on the Edit button. it shows a new Weather Table on Weka.
+
+MCSL-223 IGNOU pg. 6
+
+Weather Table after adding new attribute CLIMATE:
+
+Relation: weather-weka.filters.unsupervised. attribute. Add-Nclimate-LNominal-Clast
+outlook | temparature | humidity | windy | play | climate
+
+1 85.0 85.0 false ino
+
+2‘ jovercast 80.0 90.0itrue no
+
+3 |sunny 83.0 86.0/false yes
+
+4 [rainy 70.0 86.0 False yes
+
+5  |rainy 68.0 80.0false iyes
+
+{6 rainy 65.0 70.0jtrue no
+
+|7__lovercast 64.0] 65.0/False _iyes
+|sunny 72.0| 95.0\true —|no
+|sunny 69.0} —70.0/false__lyes
+
+10 [rainy 75.0| 80.0/false —_jyes
+
+Remove > Pre-Processing Technique:
+
+Procedure:
+
+1) Start > Programs > Weka-3-4 > Weka-3-4
+
+2) Click on explorer.
+
+3) Click on open file.
+
+4) Select Weather.arff file and click on open.
+
+5) Click on Choose button and select the Filters option.
+6) In Filters. we have Supervised and Unsupervised data.
+7) Click on Unsupervised data.
+
+8) Select the attribute Remove.
+
+9) Select the attributes windy, play to Remove.
+
+10) Click Remove button and then Save.
+
+11) Click on the Edit button. it shows a new Weather Table on Weka.
+
+MCSL-223 IGNOU
+
+pg.7
+
+Weather Table after removing attributes WINDY. PLAY:
+
+Relation: weather-weka.filters.unsupervised. attribute.Remove-R4-5
+| one temparature | humidity
+1 sunny 85.0 85.0
+2  ~=jovercast 80.0 90.0
+3 sunny 83.0 86.0
+4 rainy 70.0 86.0
+Ss rainy 68.0 80.0
+16 —|rainy 65.0 70.0
+7 —‘jovercast 64.0 65.0
+sunny 72.0 95.0
+|9 [sunny 69.0 70.0
+10 jrainy 75.0 80.0
+
+Normalize > Pre-Processing Technique:
+
+Procedure:
+
+1) Start > Programs > Weka-3-4 > Weka-3-4
+
+2) Click on explorer.
+
+3) Click on open file.
+
+4) Select Weather.arff file and click on open.
+
+5) Click on Choose button and select the Filters option.
+
+6) In Filters. we have Supervised and Unsupervised data.
+7) Click on Unsupervised data.
+
+8) Select the attribute Normalize.
+
+9) Select the attributes temparature, humidity to Normalize.
+10) Click on Apply button and then Save.
+
+11) Click on the Edit button, it shows a new Weather Table with normalized values on Weka.
+
+MCSL-223 IGNOU pg. 8
+
+Weather Table after Normalizing TEMPARATURE, HUMIDITY:
+
+2)
+
+Relation: weather-weka.filters.unsupervised. attribute. Normalize
+
+has ee temparature | humidity | windy | play
+1 1.0) 0.6666... False no
+2 lovercast | 0.7619047...| 0.8333... true no
+3 {sunny 0.9047619... 0.7 false yes
+4 rainy 0.2857142... 0.7 False yes
+iS jrainy 0,1904761... O.Sfalse yes
+rainy 0.0476190.../ 0.1666... true no
+17 jovercast 0.0 0.0/False yes
+}8 sunny =| 0,.3809523... 1.0/true no
+sunny 0.2380952...|0.1666... \False yes
+10 |rainy 0,.5238095... 0.5 false yes
+
+Undo
+
+[0K _] [_caneet_]
+
+Result:
+
+This program has been successfully executed.
+
+MCSL-223 IGNOU
+
+pg.9
+
+EXPERIMENT NO: 4
+
+Apply Pre-Processing techniques to the training data set of Employee Table
+
+Description:
+
+Real world databases are highly influenced to noise, missing and inconsistency due to their queue size so the
+data can be pre-processed to improve the quality of data and missing results and it also improves the efficiency.
+
+There are 3 pre-processing techniques they are:
+
+1) Add
+2) Remove
+3) Normalization
+
+Creation of Employee Table:
+
+Procedure:
+
+1) Open Start > Programs > Accessories > Notepad
+2) Type the following training data set with the help of Notepad for Employee Table.
+
+@relation employee
+
+@attribute name {x,y.z.a.b}
+@attribute id numeric
+
+@attribute salary {low.medium.high}
+@attribute exp numeric
+
+@attribute gender {male.female}
+@attribute phone numeric
+
+@data
+
+x, 101 low,2.male,250311
+y.102.high.3.female.251665
+z,103,medium, 1 ,male,240238
+a,104.low.5.female.200200
+
+b, 105, high.2.male.240240
+
+3) After that the file is saved with .arff file format.
+
+4) Minimize the arff file and then open Start > Programs > weka-3-4.
+
+5) Click on weka-3-4. then Weka dialog box is displayed on the screen.
+
+6) In that dialog box there are four modes, click on explorer.
+
+7) Explorer shows many options. In that click on ‘open file’ and select the arff file
+8) Click on edit button which shows employee table on weka.
+
+MCSL-223 IGNOU pg. 10
+
+Training Data Set > Emplovee Table
+
+I
+
+Relation: employee
+[a name id salary | exp | gender | phone
+Nene : 2 :
+
+Add > Pre-Processing Technique:
+
+Procedure:
+
+1) Start > Programs > Weka-3-4 > Weka-3-4
+
+2) Click on explorer.
+
+3) Click on open file.
+
+4) Select Employee.arff file and click on open.
+
+5) Click on Choose button and select the Filters option.
+
+6) In Filters. we have Supervised and Unsupervised data.
+
+7) Click on Unsupervised data.
+
+8) Select the attribute Add.
+
+9) Anew window is opened.
+
+10) In that we enter attribute index, type. data format. nominal label values for Address.
+11) Click on OK.
+
+12) Press the Apply button, then a new attribute is added to the Employee Table.
+13) Save the file.
+
+14) Click on the Edit button, it shows a new Employee Table on Weka.
+
+MCSL-223 IGNOU pg. 11
+
+Employee Table after adding new attribute ADDRESS:
+
+Relation: employee-weka.filters.unsuper vised. attribute, Add-NAddress-Lhyd, pdtr, kdp, jmd-...
+name id salary exp | gender | phone | Address
+
+1 x 101.0jlow 2.0imale 25031...
+
+2 ly 102.0/high 3.0\female | 25166...
+
+3 iz 103.0|medium 1.0jmale 24023...
+
+4 |a 104.0\low 5,0fFemale | 20020...
+
+5S |b 105.0|high 2.0\male | 24024...
+
+——
+
+—=—=—_ =
+
+Remove > Pre-Processing Technique:
+Procedure:
+
+1) Start > Programs > Weka-3-4 > Weka-3-4
+
+2) Click on explorer.
+
+3) Click on open file.
+
+4) Select Employee.arff file and click on open.
+
+5) Click on Choose button and select the Filters option.
+6) In Filters. we have Supervised and Unsupervised data.
+7) Click on Unsupervised data.
+
+8) Select the attribute Remove.
+
+9) Select the attributes salary, gender to Remove.
+
+10) Click Remove button and then Save.
+
+11) Click on the Edit button. it shows a new Employee Table on Weka.
+
+MCSL-223 IGNOU
+
+pg. 12
+
+Employee Table after removing attributes SALARY. GENDER:
+
+ewer
+Relation: employee-weka. filters unsupervised. attribute. Remove-R3,5
+
+name id exp | phone
+Nominal | Numeric | Numeric | Numeric
+
+Normalize > Pre-Processing Technique:
+
+Procedure:
+
+1) Start > Programs > Weka-3-4 > Weka-3-4
+
+2) Click on explorer.
+
+3) Click on open file.
+
+4) Select Employee.arff file and click on open.
+
+5) Click on Choose button and select the Filters option.
+
+6) In Filters, we have Supervised and Unsupervised data.
+7) Click on Unsupervised data.
+
+8) Select the attribute Normalize.
+
+9) Select the attributes id, experience, phone to Normalize.
+
+10) Click on Apply button and then Save.
+11) Click on the Edit button, it shows a new Employee Table with normalized values on Weka.
+
+MCSL-223 IGNOU pg. 13
+
+Emplovee Table after Nor ID. EXP, PHONE:
+
+Relation: cnsoye-ela filters.unsupervised. attribute. Normalize
+| salary | exp | gender | phone
+1 |x 0.0\low 0.25|male | 25031...
+2 ily 0.25|high 0. = 25166...
+3 iz 0.5|medium 0.0jmale | 24023...
+4 |a 0.75|low 1.0\female | 20020...
+is ib 1,0]high 0,.25imale | 24024...
+
+Result:
+
+This program has been successfully executed.
+
+MCSL-223 IGNOU pg. 14
+
+EXPERIMENT NO: 5
+
+Aim: Finding Association Rules for Buying data.
+
+Description:
+
+In data mining, association rule learning is a popular and well researched method for discovering interesting
+
+relations between variables in large databases. It can be described as analyzing and presenting strong rules discovered
+in databases using different measures of interestingness. In market basket analysis association rules are used and they
+
+are also employed in many application areas including Web usage mining, intrusion detection and bioinformatics.
+
+Creation of Buying Table:
+
+Procedure:
+
+1) Open Start > Programs > Accessories > Notepad
+2) Type the following training data set with the help of Notepad for Buying Table.
+
+@relation buying
+
+@attribute age {L20,20-40,G40}
+@attribute income {high,medium.low}
+@attribute stud {yes.no}
+@attribute creditrate {fair.excellent}
+@attribute buyscomp {yes.no}
+@data
+
+L20,high.no, fair.yes
+20-40. low. yes. fair yes
+G40.medium.yes. fair.yes
+L20,low.no.fair.no
+
+G40, high.no,excellent,yes
+L20.low.yes.fair.yes
+20-40_high. yes. excellent.no
+G40, low.no.fair.yes
+L20,high.yes,excellent.yes
+
+G40. high.no. fair.yes
+L20.low.yes.excellent.no
+
+G40, high. yes,excellent.no
+20-40,medium. yes.excellent.yes
+L20,medium. yes.fair.yes
+
+G40, high. yes,excellent.yes
+
+After that the file is saved with .arff file format.
+
+Minimize the arff file and then open Start > Programs > weka-3-4.
+
+Click on weka-3-4, then Weka dialog box is displayed on the screen.
+
+In that dialog box there are four modes. click on explorer.
+
+Explorer shows many options. In that click on ‘open file’ and select the arff file
+Click on edit button which shows buying table on weka.
+
+Output:
+
+Training Data Set > Buying Table
+
+MCSL-223
+
+IGNOU pg. 15
+
+Relation: yee
+
+"| age | income | stud | creditrate| buyscomp
+Nominal | Nominal | Nominal | Nominal Nominal
+
+1 20 high no Fair yes
+
+2 (20-40 low yes Fair yes
+
+3  |G40 medium |yes \Fair yes
+
+4+ (L20 low no Fair no
+
+{5 = |G40 high no jexcellent lyes
+120 low yes Fair yes
+20-40 thigh yes lexcellent ino
+G40 low no fair yes
+L20 high yes xcellent yes
+G40 high no fair yes
+120 yes _jexcellent ino
+G40 high yes lexcellent [no
+20-40 jmedium lyes xcellent lyes
+120 medium jyes fair yes
+G40 high yes jexcellent lyes
+
+Procedure for Association Rules:
+
+1)
+2)
+3)
+
+Open Start > Programs > Weka-3-4 > Weka-3-4
+
+Open explorer.
+
+Click on open file and select buying.arff
+
+Select Associate option on the top of the Menu bar.
+
+Select Choose button and then click on Apriori Algorithm.
+
+Click on Start button and output will be displayed on the right side of the window.
+
+MCSL-223 IGNOU pg. 16
+
+[_ Choose J Apriori -N 10 -T 0-C 0.9-D 0.05 -U1.0-M0.1 -5-1.0
+
+Gia) (Se) Ameen
+
+Result ist (right-click For «APE tOFt
+
+Minimum support: 0.2 (3 instances)
+Minimum metric <confidence>: 0.9
+Number of cycles performed: 16
+Generated sets of large itemsets:
+
+| Size of set of large itemsets L(1): 12
+Size of set of large itemsets L(2): 29
+
+Size of set of large itemsets L(3): 15
+
+Best rules found:
+
+1. stud=yes creditrate=fair 4 ==> buyscomp=yes 4
+
+2. incomeshigh stud=yes 4 ==> creditrate=excellent 4
+3. stud=yes buyscomp=no 3 ==> creditrate=excellent 3
+4. creditrate=excellent buyscomp=no 3 ==> stud=yes 3
+5. income=low buyscomp=yes 3 ==> creditrate=fair 3
+6. income=medium 3 ==> stud=yes buyscomp=yes 3
+7. income=medium stud=yes 3 ==> buyscomp=yes 3
+8. income=medium buyscomp=yes 3 ==> stud=yes 3
+S. income=high stud=no 3 ==> buyscomp=yes 3
+
+10. age=G40 creditrate=fair 3 ==> buyscomp=yes 3
+
+m
+
+(wes) gp *°
+
+This program has been successfully executed.
+
+MCSL-223 IGNOU
+
+pg. 17
+
+EXPERIMENT NO: 6
+Aim: Finding Association Rules for Banking data.
+Description:
+
+In data mining. association rule learning is a popular and well researched method for discovering interesting
+relations between variables in large databases. It can be described as analyzing and presenting strong rules discovered
+in databases using different measures of interestingness. In market basket analysis association rules are used and they
+are also employed in many application areas including Web usage mining, intrusion detection and bioinformatics.
+
+Procedure:
+
+1) Open Start > Programs > Accessories > Notepad
+
+2) Type the following training data set with the help of Notepad for Banking Table.
+@relation bank
+@attribute cust {male.female}
+@attribute accno
+{0101,0102.0103,0104,0105,0106,0107.0108.0109,0110.0111.0112.0113.0114,0115}
+@attribute bankname {sbi.hdfc.sbh.ab.rbi}
+@attribute location {hyd.jmd,antp,pdtr,.kdp}
+@attribute deposit {yes.no}
+@adata
+male,0101,sbi,hyd.yes
+female.0102.hdfc.jmd.no
+male,0103.sbh.antp.yes
+male,.0104.ab.pdtr.yes
+female,0105,sbijmd,no
+male,0106,ab.hyd.yes
+female.0107.rbi.jmd.yes
+female,0108,hdfc,kdp,no
+male,0109,sbh.kdp.yes
+male,0110.ab.jmd.no
+female.0111.rbi,.kdp.yes
+male,0112,sbijmd.yes
+female,0113.rbi,antp.no
+male,0114.hdfc.pdtr.yes
+female,0115,sbh.pdtr.no
+
+3) After that the file is saved with .arff file format.
+
+4) Minimize the arff file and then open Start > Programs > weka-3-4.
+
+5) Click on weka-3-4, then Weka dialog box is displayed on the screen.
+
+6) In that dialog box there are four modes, click on explorer.
+
+7) Explorer shows many options. In that click on ‘open file’ and select the arff file
+8) Click on edit button which shows banking table on weka.
+
+Training Data Set > Banking Table
+
+MCSL-223 IGNOU pg. 18
+
+‘
+
+a
+eee
+PE
+
+BR CURLERS EGG
+
+undo} (ox) (icone)
+
+Procedure for Association Rules:
+
+1)
+2)
+
+Open Start > Programs > Weka-3-4 > Weka-3-4
+
+Open explorer.
+
+Click on open file and select bank.arff
+
+Select Associate option on the top of the Menu bar.
+
+Select Choose button and then click on Apriori Algorithm.
+
+Click on Start button and output will be displayed on the right side of the window.
+
+MCSL-223 IGNOU pg. 19
+
+Associator
+
+“rere | Cty | Cuter Associate | Select attributes | Visualize
+
+| Stop
+Result list (right-click for «
+
+Choose | Apriori -N 10 -T0-C0.9-D 0,05 -U 1.0-M0.1 -S-1.0
+
+Associator output
+
+Apriori
+
+Minimum support: 0.15 (2 instances)
+Minimum metric <confidence>: 0.9
+Number of cycles performed: 17
+Generated sets of large itemsets:
+Size of set of large itemsets L(1):
+Size of set of large itemsets L(2):
+
+Size of set of large itemsets L(3):
+
+Best rules found:
+
+2. bankname=ab 3 ==> cust=male 3
+
+1. bankname=rbi 3 ==> cust=female 3
+
+14
+
+24
+
+cont: (1)
+
+conf: (1)
+
+3. cust=female deposit=yes 2 ==> bankname=rbi
+4. bankname=rbi deposit=yes 2 ==> cust=female
+5. cust=female banknameshdfc 2 ==> deposit=no
+6. bankname=hdfc deposit=no 2 ==> cust=female
+7. cust=male location=pdtr 2 ==> deposit=yes 2
+&. location=pdtr deposit=yes 2 ==> cust=male 2
+S. location=hyd 2 ==> cust=male deposit=yes 2
+10. cust=emale location=hyd 2 ==> deposit=yes 2
+
+2
+Zz
+2
+2
+
+con£: (1)
+con£: (1)
+conf: (1)
+conf: (1)
+conf: (1)
+conf: (1)
+conf: (1)
+conf: (1)
+
+m
+
+Result:
+
+MCSL-223
+
+This program has been successfully executed.
+
+IGNOU
+
+pg. 20
+
+EXPERIMENT NO: 7
+
+Aim: Finding Association Rules for Employee data.
+
+Description:
+
+In data mining. association rule learning is a popular and well researched method for discovering interesting
+relations between variables in large databases. It can be described as analyzing and presenting strong rules discovered
+in databases using different measures of interestingness. In market basket analysis association rules are used and they
+are also employed in many application areas including Web usage mining, intrusion detection and bioinformatics.
+
+Creation of Banking Table:
+
+Procedure:
+
+1) Open Start > Programs > Accessories > Notepad
+2) Type the following training data set with the help of Notepad for Employee Table.
+
+MCSL-223
+
+@relation employee-1
+
+@attribute age {youth, middle. senior}
+@attribute income {high, medium, low}
+@attribute class {A. B. C}
+
+@data
+
+youth, high, A
+youth, medium,B
+youth, low, C
+middle, low. C
+middle, medium, C
+middle, high. A
+senior. low, C
+senior, medium, B
+senior, high. B
+middle, high. B
+
+After that the file is saved with .arff file format.
+
+Minimize the arff file and then open Start > Programs > weka-3-4.
+
+Click on weka-3-4, then Weka dialog box is displayed on the screen.
+
+In that dialog box there are four modes, click on explorer.
+
+Explorer shows many options. In that click on ‘open file’ and select the arff file
+Click on edit button which shows employee table on weka.
+
+IGNOU pg. 21
+
+Trai Data Set > Employee Table
+
+g
+
+bb 5lfg
+
+ee
+eeeeree rl
+
+HUGGER
+
+Procedure for Association Rules:
+
+1)
+2)
+3)
+4)
+5)
+6)
+
+Open Start > Programs > Weka-3-4 > Weka-3-4
+
+Open explorer.
+
+Click on open file and select employee-1.arff
+
+Select Associate option on the top of the Menu bar.
+
+Select Choose button and then click on Apriori Algorithm.
+
+Click on Start button and output will be displayed on the right side of the window.
+
+MCSL-223 IGNOU pg. 22
+
+Output:
+
+Preprocess | Classify | Custer Assocate | Select attributes | Visuaize|
+
+Assocator
+
+[Choose "| Apriori N10 -T0-C 0.9 -D 0.05 -U 1.0-M0,1-S-1.0
+Gaia) Seo) ae
+
+Result ist (right-click for « | *P=40F4 7
+
+Minimum support: 0.15 (1 instances)
+
+| Minimum metric <confidence>: 0.9
+I Number of cycles performed: 17
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 9
+Size of set of large itemsets L(2): 22
+Size of set of large itemsets L(3): 10
+Best rules found:
+
+1. income=low 3 ==> class=C 3 conf: (1)
+
+2. class=A 2 ==> income=high 2 conf: (1) =
+3. age=senior income=low 1 ==> class=C 1 conf: (1)
+4. age=senior class=C 1 ==> income=low 1 conf: (1)
+
+5. age=senior income=medium 1 ==> class=B 1 conf: (1)
+6. age=senior income=high 1 ==> class=B 1 conf: (1)
+7. age=middle income=low 1 ==> class=C 1 conf: (1)
+8. age=middle income=medium 1 ==> class=C 1 conf: (1)
+9. income=medium class=C 1 ==> age=middle 1 conf: (1)
+10. age=middle class=B 1 ==> income=high 1 conf: (1)
+
+Status
+2 oo
+: —
+
+This program has been successfully executed.
+
+MCSL-223 IGNOU pg. 23
+
+EXPERIMENT NO: 8
+
+To Construct Decision Tree for Weather data and classify it.
+
+Description:
+Classification & Prediction:
+
+Classification is the process for finding a model that describes the data values and concepts for the
+purpose of Prediction.
+
+Decision Tree:
+
+A decision Tree is a classification scheme to generate a tree consisting of root node, internal nodes
+and external nodes.
+
+Root nodes representing the attributes. Internal nodes are also the attributes. External nodes are the
+classes and each branch represents the values of the attributes
+
+Decision Tree also contains set of rules for a given data set: there are two subsets in Decision Tree.
+One is a Training data set and second one is a Testing data set. Traiming data set is previously classified data.
+Testing data set is newly generated data.
+
+Creation of Weather Table:
+
+Procedure:
+
+1) Open Start > Programs > Accessories > Notepad
+2) Type the following training data set with the help of Notepad for Weather Table.
+@relation weather
+@attribute outlook {sunny. rainy, overcast}
+@attribute temperature numeric
+@attribute humidity numeric
+@attribute windy {TRUE, FALSE}
+@attribute play {yes, no}
+
+@data
+sunny.85.85,.FALSE.no
+sunny,80,90, TRUE,no
+overcast,83,86.FALSE. yes
+rainy.70,96.F ALSE. yes
+rainy,68,80,.FALSE. yes
+rainy.65,70. TRUE.no
+overcast,64,65, TRUE. yes
+sunny.72.95,.FALSE.no
+sunny.69,70,.FALSE. yes
+rainy.75,80,.FALSE, yes
+sunny. 75.70. TRUE. yes
+overcast,72.90, TRUE. yes
+overcast,81.75.FALSE.yes
+rainy.71,91,TRUE.no
+
+MCSL-223 IGNOU pg. 24
+
+3) After that the file is saved with .arff file format.
+4) Minimize the arff file and then open Start > Programs > weka-3-4.
+
+5) Click on weka-3-4, then Weka dialog box is displayed on the screen.
+
+6) In that dialog box there are four modes, click on explorer.
+
+7) Explorer shows many options. In that click on ‘open file’ and select the arff file
+8) Click on edit button which shows weather table on weka.
+
+Training Data Set > Weather Table
+
+sea ee eae hy
+
+Procedure for Decision Trees:
+
+1) Open Start > Programs > Weka-3-4 > Weka-3-4
+
+2) Open explorer.
+
+3) Click on open file and select weather.arff
+
+4) Select Classifier option on the top of the Menu bar.
+
+5) Select Choose button and click on Tree option.
+
+6) Click on J48.
+
+7) Click on Start button and output will be displayed on the right side of the window.
+8) Select the result list and right click on result list and select Visualize Tree option.
+9) Then Decision Tree will be displayed on new window.
+
+MCSL-223 IGNOU pg. 25
+
+Output:
+
+onl Custer | Associate | Select attributes | Visualize
+
+eee
+
+Test options Classifier output
+©) Use training set |=== Summary === -
+oD peas ee eet woh Correctly Classified Instances 3 64.2857 &
+@ Cross-vaidation Foks 10 Incorrectly Classified Instances 5 35.7143 &
+7 Kappa statistic 0.186
+Percentage split % (66
+: = Mean absolute error 0.2857
+[ More options... | | Root mean squared error 0.4818
+Relative absolute error 60 :
+Root relative squared error 97.6586 &
+Qvom) a
+bd Total Number of Instances 4
+Start top
+=== Detailed Accuracy By Class ===
+Result list (right-click for options)
+[12:00:48-tees.48 TP Rate FP Rate Precision Recall F-Measure Class
+0.778 0.6 0.7 0.778 0.737 yes 7
+0.4 0.222 0.5 0.4 0.444 no
+
+=== Confusion Matrix ===
+
+ab <-- classified as
+721)a=yes
+321b=n0
+
+=sunny =overcast =rainy
+
+uo
+
+<=75 »7 =TRUE =FALSE
+
+Result: _ Thus program has been successfully executed.
+
+MCSL-223 IGNOU pg. 26
+
+EXPERIMENT NO: 9
+
+To Construct Decision Tree for Customer data and classify it.
+
+Description:
+Classification & Prediction:
+
+Classification is the process for finding a model that describes the data values and concepts for the
+purpose of Prediction.
+
+Decision Tree:
+
+A decision Tree is a classification scheme to generate a tree consisting of root node, internal nodes
+and external nodes.
+
+Root nodes representing the attributes. Internal nodes are also the attributes. External nodes are the
+classes and each branch represents the values of the attributes
+
+Decision Tree also contains set of rules for a given data set: there are two subsets in Decision Tree.
+One is a Training data set and second one is a Testing data set. Training data set is previously classified data.
+Testing data set is newly generated data.
+
+Creation of Customer Table:
+
+Procedure:
+
+1) Open Start > Programs > Accessories > Notepad
+2) Type the following traiming data set with the help of Notepad for Customer Table.
+@relation customer
+@attribute name {x,y.z.u.v.Lw.q.r.n}
+@attribute age {youth,middle,senior}
+@attribute income {high.medium,.low}
+@attribute class {A.B}
+
+@data
+
+x. youth. high. A
+y. youth. low.B
+zamiddle.high.A
+u.middle.low.B
+v.senior.high.A
+lsenior.low.B
+w. youth. high.A
+q.youth.low.B
+r.middle.high.A
+n.senior.high.A
+
+MCSL-223 IGNOU pg. 27
+
+3) After that the file is saved with .arff file format.
+
+4) Minimize the arff file and then open Start > Programs > weka-3-4.
+
+5) Click on weka-3-4, then Weka dialog box is displayed on the screen.
+
+6) In that dialog box there are four modes, click on explorer.
+
+7) Explorer shows many options. In that click on ‘open file’ and select the arff file
+8) Click on edit button which shows customer table on weka.
+
+Training Data Set > Customer Table
+
+name age |income | clase
+
+I} Newsinal inal ara
+i ok yyout == |high A
+z Wy fyout) low IB
+3k made iA
+4 imdde er IB
+5 ole senior high A
+‘senior = low IB
+7 fw yout) = high |A
+iL your low IB
+ir mdde hi |A
+10 of senior hi |A
+
+Procedure for Decision Trees:
+
+1) Open Start > Programs > Weka-3-4 > Weka-3-4
+
+2) Open explorer.
+
+3) Click on open file and select customer.arff
+
+4) Select Classifier option on the top of the Menu bar.
+
+5) Select Choose button and click on Tree option.
+
+6) Click on J48.
+
+7) Click on Start button and output will be displayed on the right side of the window.
+8) Select the result list and right click on result list and select Visualize Tree option.
+9) Then Decision Tree will be displayed on new window.
+
+MCSL-223 IGNOU pg. 28
+
+ut:
+
+Classifier
+
+Preprocess | Classify Cluster | Associate | Select attributes | visualize |
+
+| Choose | 348 -C0.25-M2
+
+a === Confusion Matrix ===
+
+<-- classified as
+
+abcdefghij
+o1dgaggagagagad
+1ooaoagoagg0d0
+ooo1tdaadcagcadn
+oologagqaggaana
+
+ooooo0L0000
+ooootdagagdgdo
+looooooagaad0
+loooagaoaggad
+ooi1dgaagagoo
+ooooldaaaana
+
+Decision Tree
+
+(o
+[
+
+ees J48 (cust
+
+= senior
+
+middle
+
+youth
+
+low
+
+= medium
+
+high
+
+This program has been successfully executed.
+
+Result
+
+pg. 29
+
+IGNOU
+
+MCSL-223
+
+EXPERIMENT NO: 10
+
+To Construct Decision Tree for Location data and classify it.
+Description:
+Classification & Prediction:
+
+Classification is the process for finding a model that describes the data values and concepts for the
+purpose of Prediction.
+
+Decision Tree:
+
+A decision Tree is a classification scheme to generate a tree consisting of root node, internal nodes
+and external nodes.
+
+Root nodes representing the attributes. Internal nodes are also the attributes. External nodes are the
+classes and each branch represents the values of the attributes
+
+Decision Tree also contains set of rules for a given data set: there are two subsets in Decision Tree.
+One is a Training data set and second one is a Testing data set. Training data set is previously classified data.
+Testing data set is newly generated data.
+
+Creation of Weather Table:
+
+Procedure:
+
+1) Open Start > Programs > Accessories > Notepad
+
+2) Type the following training data set with the help of Notepad for Location Table.
+@relation location
+@attribute age {21.24.25}
+@attribute location {hyd.blr.kdp}
+
+@data
+
+21.hyd
+
+21,hyd
+
+24.bIr
+
+24.blr
+
+24.blr
+
+24.blr
+
+21,hyd
+
+25.kdp
+
+25,kdp
+
+25.kdp
+3) After that the file is saved with .arff file format.
+4) Minimize the arff file and then open Start > Programs > weka-3-4.
+5) Click on weka-3-4, then Weka dialog box is displayed on the screen.
+6) In that dialog box there are four modes, click on explorer.
+7) Explorer shows many options. In that click on ‘open file’ and select the arff file
+8) Click on edit button which shows location table on weka.
+
+MCSL-223 IGNOU pg. 30
+
+Training Data Set > Location Table
+
+wanna
+
+a
+
+Procedure for Decision Trees:
+
+1)
+
+MCSL-223
+
+Open Start > Programs > Weka-3-4 > Weka-3-4
+Open explorer.
+
+Click on open file and select location.arff
+
+Select Classifier option on the top of the Menu bar.
+Select Choose button and click on Tree option.
+Click on J48.
+
+Click on Start button and output will be displayed on the right side of the window.
+
+Select the result list and right click on result list and select Visualize Tree option.
+
+Then Decision Tree will be displayed on new window.
+
+IGNOU
+
+pg. 31
+
+Output:
+
+Sat)
+
+Result ist (ight-cick for options)
+
+14:39:21 - trees.J48
+
+Classifier output
+
+[COrrectiy CIassiried Insvances
+Incorrectly Classified Instances
+Kappa statistic
+
+Mean absolute error
+
+Root mean squared error
+Relative absolute error
+
+Root relative squared error
+Total Number of Instances
+
+=== Detailed Accuracy By Class ===
+TP Rate FP Rate Precision
+1 0 1 1
+1 0 1 1
+i 0 4: 1
+
+=== Confusion Matrix ==
+
+eoooorse
+
+e
+
+1
+
+1
+
+Recall F-Measure
+
+Class
+
+hyd
+blr
+kdp
+
+Status
+
+Decision Tree:
+
+Result:
+
+25
+
+This program has been successfully executed.
+
+MCSL-223
+
+IGNOU
+
+pg. 32
+
+EXPERIMENT NO: 11
+
+LISTING APPLICATIONS FOR MINING|
+
+AIM:
+To list all the categorical (or nominal) attributes ahd the real-valued attributes separately.
+
+PROCEDURE:
+1)Open the Weka GUI Chooser.
+
+2)Select EXPLORER present in Applications.
+
+3)Select Preprocess Tab.
+
+4)Go to OPEN file and browse the file that 1s already stored in the system “bank.csv”.
+
+5)Clicking on any attribute in the left panel will show the basic statistics on that selected
+attribute.1.4
+
+OUTPUT:
+
+Atribunes: 12 Massing: ©(0%) Genet: Lnque 0 (0%
+
+O | esdee a
+
+MCSL-223 IGNOU pg. 33
+
+EXPERIMENT NO: 12
+FILE FORMAT FOR DATA MINING
+
+Aim: To study the file formats for the data mining.
+Introduction:
+
+WEKA supports a large number of file formats for the data. The complete list of file formats are given
+here
+
+1. arff
+
+2. arff.gz
+3. bsi
+
+4. csv
+
+5. dat
+
+6. data
+
+7, json
+
+8. json. gz
+9. libsvm
+10. m
+
+11. names
+12. xrff
+13. xrff.gz
+
+The types of files that it supports are listed 1n the drop-down list box at the bottom of the screen.
+
+This is shown in the screenshot given below.
+
+MCSL-223 IGNOU pg. 34
+
+eoe Open
+
+Look In: | (jij drsarang i) L@) Le) La) Le)
+@ _pycache_ @ bar @ — Invoke options dialog
+@ anaconda3 @ bilobcity |.
+(@ AndroidstudioProjects @ bower_components @ —_
+(@ AndroidstudioProjects copy (@@ Calibre Library @ some file formats offer additional
+lication De options which can be customized
+@ rp . a a o when invoking the options dialog.
+I<& J Jo
+File Name:
+
+Files of Type:
+
+Arff data files (*.arff.gz)
+C4.5 data files (*.names)
+C4.5 data files (*.data)
+
+CSV data files (*.csv)
+
+JSON Instances files (*.json)
+JSON Instances files (*.json.gz)
+libsvm data files (*.libsvm)
+
+As you would notice it supports several formats including CSV and JSON.
+
+The default file type is Arff.
+Arff Format
+An Arff file contains two sections - header and data.
+
+The header describes the attribute types.
+The data section contains a comma separated list of data.
+
+As an example for Arff format, the Weather data file loaded from the WEKA sample databases is shown
+below:
+
+MCSL-223 IGNOU pg. 35
+
+@relation weather.symbolic _———_-S———™w name
+
+@attribute outlook {sunny, overcast, rainy}
+
+@attribute temperature {hot, mild, cool}
+
+@attribute humidity {high, normal} :
+@attribute windy {TRUE, FALSE} q— Attributes
+@attribute play {yes, no}
+
+@data
+
+sunny, hot,high,FALSE,no
+
+sunny, hot,high,TRUE,no :
+overcast,hot,high,FALSE,yes Target / Class variable
+rainy,mild,high, FALSE, yes
+
+rainy,cool,normal,FALSE,yes
+
+rainy,cool,normal,TRUE,no
+
+overcast,cool,normal, TRUE, yes
+
+sunny,mild,high,FALSE,no
+
+sunny,cool,normal, FALSE, yes
+
+rainy,mild,normal,FALSE,yes
+
+sunny,mild,normal, TRUE, yes
+
+overcast,mild,high,TRUE,yes
+
+overcast, hot,normal, FALSE, yes g— Data Val ues
+
+rainy,mild,high,TRUE,no
+From the screenshot, you can infer the following points —
+The @relation tag defines the name of the database.
+The @attribute tag defines the attributes.
+The @data tag starts the list of data rows each containing the comma separated fields.
+
+The attributes can take nominal values as in the case of outlook shown here —
+
+@attribute outlook (sunny, overcast, rainy)
+
+The attributes can take real values as in this case —
+
+@attribute temperature real
+
+You can also set a Target or a Class variable called play as shown here —
+
+@attribute play (yes. no)
+
+The Target assumes two nominal values yes or no.
+
+Result:
+
+Thus the different file formats for the data mining was studied.
+
+MCSL-223 IGNOU pg. 36
+
+EXPERIMENT NO: 13
+CONVERSION OF TEXT FILE INTO ARFF FILE
+
+Aim:
+To convert a text file to ARFF(Attribute-Relation File Format) using Weka3.8.2 tool.
+
+Objectives:
+
+Most of the data that we have collected from public forum is in the text format that cannot be read by
+
+Weka tool. Since Weka (Data Mining tool) recognizes the data in ARFF format only we have to convert the
+text file into ARFF file.
+
+Algorithm:
+
+1. Download any data set from UCI data repository.
+
+2. Open the same data file from excel. It will ask for delimiter (which produce column) in excel.
+3. Add one row at the top of the data.
+
+4. Enter header for each column.
+
+5. Save file as .CSV (Comma Separated Values) format.
+
+6. Open Weka tool and open the CSV file.
+
+7. Save it as ARFF format.
+
+Output:
+Data Text File:
+a —_—— = rere
+Pej) eS oD eee oe! BOL SS
+SS SS Sk. Soe Se twa eee eee
+- . —___ =
+MCSL-223 IGNOU
+
+pg. 37
+
+Data ARFF File:
+
+ee | a ee Cr
+pen ee ee 2.) —— — = ae oem
+ad 2 oo
+
+So
+
+=)
+~-
+— AP
+Ca —
+
+‘
+
+Result:
+
+Thus, conversion of a text file to ARFF(Attribute-Relation File Format) using Weka3.8.2 tool is implemented.
+
+MCSL-223 IGNOU pg. 38
+
+EXPERIMENT NO: 14
+CONVERSION OF ARFF TO TEXT FILE
+
+Aim:
+To convert ARFF (Attribute-Relation File Format) into text file.
+
+Objectives:
+
+Since the data in the Weka tool is in ARFF file format we have to convert the ARFF file to text format for
+further processing.
+
+Algorithm:
+
+1. Open any ARFF file in Weka tool.
+
+2. Save the file as CSV format.
+
+3. Open the CSV file in MS-EXCEL.
+
+4. Remove some rows and add coreseponding header to the data.
+5. Save it as text file with the desire delimiter.
+
+Data ARFF File:
+— EE a
+Cn > SAPP HOae te t, Alt -_ ASD
+I onan neta =oloe am = S = ase ann > eer
+i; és) yo
+
+Data Text File:
+
+Result: Thus conversion of ARFF (Attribute-Relation File Format) into text file is implemented.
+
+MCSL-223 IGNOU pg. 39
+
+EXPERIMENT NO: 15
+
+TRAINING THE GIVEN DATASET FOR AN APPLICATION
+Aim:
+To apply the concept of Linear Regression for traming the given dataset.
+
+Algorithm:
+
+1. Open the weka tool.
+
+2. Download a dataset by using UCT.
+
+3. Apply replace missing values.
+
+4. Apply normalize filter.
+
+5. Click the Classify Tab.
+
+6. Choose the Simple Linear Regression option.
+7. Select the training set of data.
+
+8. Start the validation process.
+
+9. Note the output.
+
+LINEAR REGRESSION:
+
+In statistics, Linear Regression is an approach for modeling a relationship between a scalar dependent variable Y
+
+and one or more explanatory variables denoted X.the case of explanatory variable is called Simple Linear
+Regression.
+
+Coefficient of Linear Regression is given by: Y=ax+b
+
+PROBLEM:
+Consider the dataset below where x is the number of working expeince of a college graduate and y is the
+
+corresponding salary of the graduate. Build a regression equation and predict the salary of college graduate whose
+experience is 10 years.
+
+Input:
+
+Home Insert Formutas
+
+Calibri ~\41 = i) = Hea
+B ae = ~ = => = ~ —
+ad a = == Ga Number Styles Celts
+
+ci - | &- a- = 2 . -
+
+Font « Alignment
+
+D
+
+Sheet
+
+MCSL-223 IGNOU pg. 40
+
+Weka Explorer
+
+Preprocess Classify Cluster Associate
+
+Classifier
+Choose |SimpleLinearRegression
+
+Select attributes —- Visualize
+
+Test options
+
+@ Use training set
+Supplied test set Set...
+Cross-validation Folds 10
+Percentage split % | 66
+
+More options...
+
+(Num) Y v
+
+Start Stop
+Result list (right-click for options)
+14:34:09 - functions.SimpleLinearRegression
+
+Status
+OK
+
+Classifier output
+
+Scheme:
+Relation:
+Instances:
+Attributes:
+
+Test mode:
+
+=== Classifier model (full training set) == |
+
+weka.classifiers.functions.3impleLinearRegression
+linear
+
+10
+
+2
+
+x
+
+¥
+
+evaluate on training data
+
+Linear regression on x
+
+3.54 “ K + 23.21
+
+Predicting 0 if attribute value is missing.
+
+Time taken to build model: 0 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 0.01 seconds
+
+=== Summary ===
+
+Correlation coefficient 0.9721
+Mean absolute error 4.5238
+Root mean squared error 5.111
+Relative absolute error 24.4264 &
+Root relative squared error 23.4449 &
+Total Number of Instances 10
+
+8 age
+
+Result: Thus the concept of Linear Regression for training the given dataset is applied and implemented.
+
+MCSL-223
+
+IGNOU pg. 41
+
+EXPERIMENT NO: 16
+TESTING THE GIVEN DATASET FOR AN APPLICATION
+Aim:
+To apply the Navie Bayes Classification for testing the given dataset
+Algorithm:
+
+1. Open the weka tool.
+
+2. Download a dataset by using UCI.
+3. Apply replace missing values.
+
+4. Apply normalize filter.
+
+§. Click the Classification Tab.
+
+6. Apply Navie Bayes Classification.
+7. Find the Classified Value.
+
+8. Note the output.
+
+Bayes’ Theorem In the Classification Context:
+
+X is a data tuple. In Bayesian term it is considered “evidence”.H is some hypothesis that X belongs to a specified
+class C .P(H|X) is the posterior probability of H conditioned on X .
+
+Example: predict whether a costumer will buy a computer or not " Costumers are described by two attributes: age
+and income " X is a 35 years-old costumer with an income of 40k " H is the hypothesis that the costumer will buy a
+computer " P(H|X) reflects the probability that costumer X will buy a computer given that we know the costumers’
+age and income.
+
+Input Data:
+
+. | Home | Insert Pagelayout Formulas =s-‘Data’—s Review = View — Team
+
+rs os Calibri ~j (A a) l= ==>) | Sf wrap Text General
+oPpy eee
+“DE BOT || Oe A) mE EB) EE RE Meroe center |S - % + |
+Clipboard a Font | Alignment me pind
+G12 ao ral
+Ba B c o...] E ean. | ' 4
+1 age income student credit buys computer
+2 youth high no fair no
+3 youth high no excellent no
+4 middle high no fair yes
+5 senior medium no fair yes
+6 senior low yes fair yes
+7 senior low yes excellent no
+8 middie low yes excellent yes
+3 youth medium no tair no
+10 youth low yes fair yes
+11 |senior medium yes fair yes
+2 miaaie medium no excellent yes |
+13 middie high yes fair yes
+14 senior medium no excellent no
+15 youth medium yes excellent yes
+
+16
+
+MCSL-223 IGNOU pg. 42
+
+© Weka Explore: 0 x
+
+Preprocess Classify Cluster © Associate Select attributes —- Visualize
+
+Open file... Open URL. Open DB. Generate... Indo Edit... Save...
+Filter
+Choose (None Apply Stor
+‘Current relation Selected attribute
+Relation: customer Attributes: 5. Name: age Type: Nominal
+Instances: 14 Sum of weights: 14 Missing: 0 (0%) Distinct: 3 Unique: 0 (0%)
+Attributes No. Label Count Weight
+All None Invert Pattern 1 youth 5 5
+2 middle 4 4
+No. Name 3. senior 5 5
+1 \age
+2 income
+3(_| student
+4 credit
+5 {| buys computer
+Class: buys computer (Nom) | Visualize All
+Remove
+‘Status.
+OK
+
+¢ Now we have to go to the classify tab on the top left side and click on the choose button and select the
+Naive Bayesian algorithm in it.
+
+vers txplorer
+
+eprocess Ciuster if Assoaate ] Select a@nduti
+isifier
+* @ wera
+* (ae Cassters
+dayes
+BayesNet
+
+NatweBayesMultnormaiTed
+
+NatweBayesUpdateanie
+> @ tunctons
+> @ tay
+> @ meta
+> @ misc
+> @ rules
+> @ vees
+
+MCSL-223 IGNOU pg. 43
+
+*« Now to change the parameters click on the right side at the choose button, and we are accepting the
+
+default values in this example.
+
+‘weks classifiers bayes Naivedayes
+About
+
+Class fora Naive Bayes classifier using estimator classes.
+
+batchSize 100
+
+ee eee | ee
+
+J
+
+‘Cancel
+
+J
+
+© We choose the Percentage split as our measurement method from the “Test” choices in the main panel.
+
+Since we don’t have a separate test data collection, we'll use the percentage split of 66 percent to get a
+
+good idea of the model's accuracy. Our dataset contains 14 examples, with h9 being used for training
+
+and 5 being used for testing.
+
+Test options
+
+© Use training set
+© Supplied test set Set.
+© Cross-validation Folds 10
+
+@ Percentage split % 66
+
+[ More options...
+
+| (Nom) play
+
+MCSL-223 IGNOU
+
+pg. 44
+
+© Weka Explorer
+
+Preprocess Classify Cluster
+
+Classifier
+
+‘Choose NaiveBayes
+Test options
+
+Use training set
+
+Supplied test set Set.
+
+Cross-validation folds 10
+@ Percentage split % 66
+
+More options...
+
+(Nom) buys computer
+
+Start Stop
+Result list (right-click for options)
+15:35:12 - bayes.NaiveBayes
+
+Associ. Select
+
+Classifier output
+
+=== Run information ===
+
+Scheme: weka.classifiers.bayes.NaiveBayes
+Relation: customer
+Instances: 14
+Attributes: 5
+age
+income
+~ student
+credit
+
+buys computer
+Test mode: split 66.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+Class
+Attribute no yes
+(0.38) (0.63)
+age
+youth 4.0 3.0
+middle 1.0 5.0
+senior 3.0 4.0
+[total] 8.0 12.0
+income
+high 3.0 3.0
+medium 3.0 5.0
+low 2.0 4.0
+[total] 8.0 12.0
+s
+
+Status
+OK
+
+© Weka Explorer
+
+Preprocess ‘Classify Cluster
+Classifier
+
+Associate = Select attributes —_—Visualize
+
+Choose |NaiveBayes
+Test options
+Use training set
+Supplied test set Set.
+Cross-validation Folds 10
+@ Percentage split % 66
+More options...
+
+(Nom) buys computer
+
+Start Stop
+Result list (right-click for options)
+15:35:12 - bayes.NaiveBayes
+
+Classifier output
+Class
+Attribute no yes
+(0.38) (0.63)
+age
+youth 4.0 3.0
+middle 1.0 5.0
+v senior 3.0 4.0
+[total] 8.0 12.0
+income
+high 3.0 3.0
+medium 3.0 5.0
+low 2.0 4.0
+[total] 8.0 12.0
+student
+no 5.0 4.0
+yes 2.0 7.0
+[total] 7.0 11.0
+credit
+fair 3.0 7.0
+excellent 4.0 4.0
+[total] 7.0 11.0
+
+Time taken to build model: 0 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+Status
+OK Lag , x0
+MCSL-223 IGNOU pg. 45
+
+* To generate the model, we now click “start.” When the model is done, the evaluation statistic will
+
+appear in the right panel.
+
+@ Weka Explorer — Oo x
+Preprocess Classify ‘Cluster Associate Select attributes Visualize
+Classifier
+Choose | NaiveBayes
+Test options Classifier output
+Use training set
+Supplied test set Set.
+Cross-validation Folds 10 Time taken to build model: 0 seconds
+@ Percentage split  % | 66 . .
+=== Evaluation on test split ===
+More options...
+Time taken to test model on test split: 0 seconds
+(Nom) buys computer
+=== Summary ===
+Start Stop
+Result list (right-click for options) Correctly Classified Instances 3 60 *
+. Incorrectly Classified Instances 2 40 *
+15:35:12 - bayes.NaiveBayes
+Kappa statistic oO
+Mean absolute error 0.4193
+Root mean squared error 0.4508
+Relative absolute error 88.7045 %
+Root relative squared error 99.9024 %
+Total Number of Instances 5
+=== Detailed Accuracy By Class ===
+TP Rate FP Rate Precision Recall F-Measure MCC ROC Area PRC Area Class
+0.000 0.000 ? 0.000 ? ? 0.667 0.750 no
+1.000 1.000 0.600 1.000 0.750 ? 0.667 0.833 yes
+Weighted Avg. 0.600 0.600 ? 0.600 ? ? 0.667 0.800
+=== Confusion Matrix =-=
+ab <-- classified as
+o2|[a=no
+03 | b= yes
+Status
+Log
+
+OK
+
+Result:
+
+ao
+
+Thus the Navie Bayes Classification for testing the given dataset is implemented.
+
+MCSL-223
+
+IGNOU
+
+pg. 46
+
